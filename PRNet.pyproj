@@ -1,0 +1,121 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5fb0835f-d871-4deb-96ba-1de95e27bb07</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PRNet</Name>
+    <RootNamespace>PRNet</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="api.py" />
+    <Compile Include="demo.py" />
+    <Compile Include="demo_texture.py" />
+    <Compile Include="predictor.py" />
+    <Compile Include="run_basics.py" />
+    <Compile Include="utils\cv_plot.py" />
+    <Compile Include="utils\estimate_pose.py" />
+    <Compile Include="utils\render.py" />
+    <Compile Include="utils\render_app.py" />
+    <Compile Include="utils\rotate_vertices.py" />
+    <Compile Include="utils\write.py" />
+    <Compile Include="utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".travis.yml" />
+    <Content Include="Data\net-data\256_256_resfcn256_weight.index" />
+    <Content Include="Data\net-data\mmod_human_face_detector.dat" />
+    <Content Include="Data\uv-data\canonical_vertices.npy" />
+    <Content Include="Data\uv-data\face_ind.txt" />
+    <Content Include="Data\uv-data\triangles.txt" />
+    <Content Include="Data\uv-data\uv_face.png" />
+    <Content Include="Data\uv-data\uv_face_eyes.png" />
+    <Content Include="Data\uv-data\uv_face_mask.png" />
+    <Content Include="Data\uv-data\uv_kpt_ind.txt" />
+    <Content Include="Data\uv-data\uv_kpt_mask.png" />
+    <Content Include="Data\uv-data\uv_weight_mask.png" />
+    <Content Include="Docs\images\alignment.jpg" />
+    <Content Include="Docs\images\depth.jpg" />
+    <Content Include="Docs\images\eye.jpg" />
+    <Content Include="Docs\images\pose.jpg" />
+    <Content Include="Docs\images\prnet.gif" />
+    <Content Include="Docs\images\reconstruct.jpg" />
+    <Content Include="Docs\images\swapping.jpg" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+    <Content Include="TestImages\0.jpg" />
+    <Content Include="TestImages\1.jpg" />
+    <Content Include="TestImages\2.jpg" />
+    <Content Include="TestImages\3.jpg" />
+    <Content Include="TestImages\4.jpg" />
+    <Content Include="TestImages\5.jpg" />
+    <Content Include="TestImages\AFLW2000\image00050.jpg" />
+    <Content Include="TestImages\AFLW2000\image00050.mat" />
+    <Content Include="TestImages\AFLW2000\image00081.jpg" />
+    <Content Include="TestImages\AFLW2000\image00081.mat" />
+    <Content Include="TestImages\AFLW2000\image00251.jpg" />
+    <Content Include="TestImages\AFLW2000\image00251.mat" />
+    <Content Include="TestImages\AFLW2000\image00430.jpg" />
+    <Content Include="TestImages\AFLW2000\image00430.mat" />
+    <Content Include="TestImages\AFLW2000\image00475.jpg" />
+    <Content Include="TestImages\AFLW2000\image00475.mat" />
+    <Content Include="TestImages\AFLW2000\image00514.jpg" />
+    <Content Include="TestImages\AFLW2000\image00514.mat" />
+    <Content Include="TestImages\AFLW2000\image00516.jpg" />
+    <Content Include="TestImages\AFLW2000\image00516.mat" />
+    <Content Include="TestImages\AFLW2000\image01038.jpg" />
+    <Content Include="TestImages\AFLW2000\image01038.mat" />
+    <Content Include="TestImages\AFLW2000\image01322.jpg" />
+    <Content Include="TestImages\AFLW2000\image01322.mat" />
+    <Content Include="TestImages\AFLW2000\image02283.jpg" />
+    <Content Include="TestImages\AFLW2000\image02283.mat" />
+    <Content Include="TestImages\AFLW2000\image02420.jpg" />
+    <Content Include="TestImages\AFLW2000\image02420.mat" />
+    <Content Include="TestImages\AFLW2000\image02545.jpg" />
+    <Content Include="TestImages\AFLW2000\image02545.mat" />
+    <Content Include="TestImages\AFLW2000\image02616.jpg" />
+    <Content Include="TestImages\AFLW2000\image02616.mat" />
+    <Content Include="TestImages\AFLW2000\image03324.jpg" />
+    <Content Include="TestImages\AFLW2000\image03324.mat" />
+    <Content Include="TestImages\AFLW2000\image03614.jpg" />
+    <Content Include="TestImages\AFLW2000\image03614.mat" />
+    <Content Include="TestImages\AFLW2000\image04331.jpg" />
+    <Content Include="TestImages\AFLW2000\image04331.mat" />
+    <Content Include="TestImages\trump.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data\net-data\" />
+    <Folder Include="Data\uv-data\" />
+    <Folder Include="Docs\" />
+    <Folder Include="Docs\images\" />
+    <Folder Include="TestImages\" />
+    <Folder Include="TestImages\AFLW2000\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

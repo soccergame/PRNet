@@ -1,5 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# 修改者：何智翔
+# 描述：PRNet的demo
+# ==============================================================================
 import numpy as np
 import os
+import sys
 from glob import glob
 import scipy.io as sio
 from skimage.io import imread, imsave
@@ -8,8 +15,11 @@ from time import time
 import argparse
 import ast
 
+sys.path.append(os.path.dirname(__file__))
+import api
 from api import PRN
 
+import utils
 from utils.estimate_pose import estimate_pose
 from utils.rotate_vertices import frontalize
 from utils.render_app import get_visibility, get_uv_mask, get_depth_image
